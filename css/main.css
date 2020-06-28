@@ -431,7 +431,7 @@ footer .third ul li {
   flex-direction: row;
 }
 footer input[type="text"] {
-  padding: 13px 22px;
+  padding: 13px 7px;
   color: #444;
   border: none;
   outline: none;
