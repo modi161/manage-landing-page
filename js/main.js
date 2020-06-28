@@ -15,6 +15,8 @@ dashed.onclick = function () {
   }
 };
 
+// desktop slidr
+
 let cards = document.querySelector(".cards"),
   leftArrow = document.querySelector(".left-arrow"),
   rightArrow = document.querySelector(".right-arrow"),
@@ -24,7 +26,7 @@ checker();
 
 rightArrow.onclick = function () {
   current++;
-  document.querySelector(".cards").style.transform = "translate(-445px , 0)";
+  document.querySelector(".cards").style.transform = "translate(-25% , 0)";
   checker();
 };
 

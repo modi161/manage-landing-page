@@ -152,7 +152,6 @@ ul > li a.checked {
 }
 
 .intro .analytics {
-  flex: 1;
   transform: translateY(-55px);
 }
 
@@ -240,10 +239,17 @@ ul > li a.checked {
 }
 
 .cards {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px;
   width: 3000px;
   position: relative;
+  transition: transform 0.6s ease-in-out; */
+
+  margin-bottom: 50px;
+  /* width: 1783px; */
   transition: transform 0.6s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  width: 133.33333333%;
 }
 
 .testimonial .left-arrow,
@@ -278,15 +284,29 @@ ul > li a.checked {
 }
 
 .cards .card {
-  display: inline-block;
+  /* display: inline-block;
   padding: 50px 4px 39px;
   text-align: center;
   background: #fafafa;
   position: relative;
   width: 425px;
-  margin: 0 10px;
+  margin: 0 10px; */
+
+  display: inline-block;
+  padding: 50px 4px 39px;
+  text-align: center;
+  background: #fafafa;
+  position: relative;
+  width: 33.33333%;
+  margin: 39px 10px;
+  transition: all 0.6s;
 }
 
+.test {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
 .card .img {
   height: 60px;
   width: 60px;
@@ -477,12 +497,25 @@ footer .fourth p {
     position: absolute;
     top: 20px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     margin-top: 30px;
     background: #fefefe;
     width: 72%;
     text-align: center;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    animation: ul-animate 0.5s 1;
+  }
+
+  @keyframes ul-animate {
+    from {
+      transform: translate(-50%, -30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
   }
   section:first-of-type.checked {
     margin-top: 288px;
@@ -551,19 +584,25 @@ footer .fourth p {
     visibility: hidden;
   }
 
+  .testimonial h2 {
+    margin-bottom: 35px;
+  }
+
   .cards {
-    height: 230px;
-    width: 100%;
+    height: 335px;
+    width: 133.3333333%;
   }
   .cards .card {
     position: absolute;
-    top: -19px;
-    left: 47%;
+    top: 17px;
+    left: 50%;
     transform: translate(-50%, 0);
     width: 90%;
-    height: 271px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 273px;
   }
 
   .cards > div.current-slide {
@@ -574,9 +613,9 @@ footer .fourth p {
     display: block;
     z-index: 5;
     position: absolute;
-    bottom: -6px;
+    top: 82%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -82%);
     font-size: 12px;
   }
 
